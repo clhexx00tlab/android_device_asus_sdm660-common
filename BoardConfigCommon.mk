@@ -51,7 +51,7 @@ TARGET_USES_ION := true
 TARGET_ENABLE_MEDIADRM_64 := true
 
 # Filesystem
-TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
+TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/configs/config.fs
 
 # FM
 BOARD_HAS_QCA_FM_SOC := cherokee
@@ -75,12 +75,12 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
 LOC_HIDL_VERSION := 4.0
 
 # HIDL
-DEVICE_FRAMEWORK_MANIFEST_FILE := $(COMMON_PATH)/framework_manifest.xml
-DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
-DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
+DEVICE_FRAMEWORK_MANIFEST_FILE := $(COMMON_PATH)/configs/vintf/framework_manifest.xml
+DEVICE_MANIFEST_FILE := $(COMMON_PATH)/configs/vintf/manifest.xml
+DEVICE_MATRIX_FILE := $(COMMON_PATH)/configs/vintf/compatibility_matrix.xml
 
 ODM_MANIFEST_SKUS += NFC
-ODM_MANIFEST_NFC_FILES := $(COMMON_PATH)/manifest_nfc.xml
+ODM_MANIFEST_NFC_FILES := $(COMMON_PATH)/configs/vintf/manifest_nfc.xml
 
 # Init
 TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_sdm660
@@ -116,11 +116,11 @@ TARGET_USES_INTERACTION_BOOST := true
 TARGET_TAP_TO_WAKE_NODE := "/proc/tpd_gesture"
 
 # Properties
-TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
-TARGET_PRODUCT_PROP += $(COMMON_PATH)/product.prop
-TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
-TARGET_SYSTEM_EXT_PROP += $(COMMON_PATH)/system_ext.prop
-TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
+TARGET_ODM_PROP += $(COMMON_PATH)/props/odm.prop
+TARGET_PRODUCT_PROP += $(COMMON_PATH)/props/product.prop
+TARGET_SYSTEM_PROP += $(COMMON_PATH)/props/system.prop
+TARGET_SYSTEM_EXT_PROP += $(COMMON_PATH)/props/system_ext.prop
+TARGET_VENDOR_PROP += $(COMMON_PATH)/props/vendor.prop
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
